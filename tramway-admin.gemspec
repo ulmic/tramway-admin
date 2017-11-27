@@ -9,14 +9,14 @@ Gem::Specification.new do |s|
   s.version     = Tramway::Admin::VERSION
   s.authors     = ["Pavel Kalashnikov"]
   s.email       = ["kalashnikovisme@gmail.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of Tramway::Admin."
-  s.description = "TODO: Description of Tramway::Admin."
+  s.homepage    = "https://github.com/kalashnikovisme/tramway-admin"
+  s.summary     = "Engine for admin"
+  s.description = "Engine for admin"
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
   s.add_dependency "rails", "~> 5.1.4"
 
-  s.add_development_dependency "sqlite3"
+  s.add_development_dependency "pg"
 end
