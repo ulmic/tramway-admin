@@ -1,7 +1,8 @@
 require "tramway/admin/engine"
+require "tramway/user"
 
 module Tramway
   module Admin
-    # Your code goes here...
+    ::Tramway::User.layout_path = 'tramway/admin/application'
   end
 end
