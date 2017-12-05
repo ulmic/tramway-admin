@@ -7,4 +7,10 @@
     = csrf_meta_tags
   %body
     = render 'layouts/tramway/admin/shared/navbar'
-    = yield
+    %main
+      .jumbotron
+        .container
+          = yield
+    %footer
+      .container
+        = copyright '2017', 'Tramway'
