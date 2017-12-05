@@ -15,4 +15,5 @@ gem 'copyright_mafa'
 
 group :development do
   gem 'better_errors'
+  gem 'pry'
 end

@@ -124,6 +124,9 @@ GEM
       mini_portile2 (~> 2.3.0)
     pg (0.21.0)
     popper_js (1.12.5)
+    pry (0.11.3)
+      coderay (~> 1.1.0)
+      method_source (~> 0.9.0)
     rack (2.0.3)
     rack-test (0.8.2)
       rack (>= 1.0, < 3)
@@ -212,6 +215,7 @@ DEPENDENCIES
   font-awesome-rails
   haml-rails
   pg
+  pry
   reform-rails
   sass-rails
   simple_form
