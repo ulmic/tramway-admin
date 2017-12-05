@@ -10,6 +10,7 @@ gem 'simple_form'
 gem 'bcrypt'
 gem 'reform-rails'
 gem 'font-awesome-rails'
+gem 'trap', '~> 2.0'
 
 group :development do
   gem 'better_errors'
