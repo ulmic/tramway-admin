@@ -9,6 +9,7 @@ gem 'audited'
 gem 'simple_form'
 gem 'bcrypt'
 gem 'reform-rails'
+gem 'font-awesome-rails'
 
 group :development do
   gem 'better_errors'
