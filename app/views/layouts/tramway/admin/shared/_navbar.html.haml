@@ -2,16 +2,10 @@
   %a.navbar-brand(href="#")
     Tramway Admin
   .navbar-collapse.collapse
-    %ul.navbar-nav
-      = menu_item 'Test', '#'
     %ul.nav.navbar-nav.ml-auto
       - if signed_in?
         %li.nav-item
-          = link_to edit_users_account_path, class: 'nav-link' do
-            = fa_icon :user
-            = t('helpers.links.profile')
-        %li.nav-item
-          = link_to session_path, method: :delete, class: 'nav-link' do
+          = link_to '/session', method: :delete, class: 'nav-link' do
             = fa_icon 'sign-out'
             = t('helpers.links.sign_out')
       - else
