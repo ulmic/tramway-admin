@@ -13,6 +13,8 @@ gem 'font-awesome-rails'
 gem 'trap', '~> 2.0'
 gem 'copyright_mafa'
 gem 'enumerize'
+gem 'kaminari'
+
 
 group :development do
   gem 'better_errors'
