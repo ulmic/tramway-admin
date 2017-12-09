@@ -2,9 +2,10 @@
   %a.navbar-brand(href="#")
     Tramway Admin
   .navbar-collapse.collapse
-    %ul.navbar-nav
-      - ::Tramway::Admin.available_models.each do |model|
-        = model_menu_item model: model, route: records_path(model: model)
+    - if signed_in?
+      %ul.navbar-nav
+        - ::Tramway::Admin.available_models.each do |model|
+          = model_menu_item model: model, route: ::Tramway::Admin::Engine.routes.url_helpers.records_path(model: model)
     %ul.nav.navbar-nav.ml-auto
       - if signed_in?
         %li.nav-item
