@@ -37,6 +37,11 @@ module Tramway::Admin
       "#{t("collections.#{model}.#{tab}").pluralize(:ru)} / #{count}"
     end
 
+    def active_tab(tab, index)
+      return :active if params[:scope].nil? && index == 0
+      return :active if params[:search].nil? && params[:scope].to_s == tab.to_s
+    end
+
     def record_path(*args, **options)
       super args, options.merge(model: params[:model])
     end
