@@ -12,6 +12,10 @@ module Tramway
       def default_title
         t('.title')
       end
+
+      def page_title(action, model_name)
+        t("helpers.actions.#{action}") + ' ' + genitive(model_name)
+      end
     end
   end
 end

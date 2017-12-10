@@ -5,11 +5,15 @@ module Tramway
       before_action :authenticate_admin!
       before_action :check_available!
       before_action :collections_counts, if: :model_given?
+      before_action :check_available_scope!, if: :model_given?, only: :index
 
       protect_from_forgery with: :exception
 
       def check_available!
         render '/404' unless model_given?
+      end
+
+      def check_available_scope!
         if params[:scope].present?
           render '/404' unless available_scope_given?
         end
@@ -27,6 +31,10 @@ module Tramway
 
       def decorator_class
         "#{model_class}Decorator".constantize
+      end
+
+      def form_class
+        "#{model_class}Form".constantize
       end
 
       private
