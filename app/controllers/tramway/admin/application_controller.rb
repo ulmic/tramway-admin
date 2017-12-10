@@ -10,7 +10,9 @@ module Tramway
 
       def check_available!
         render '/404' unless model_given?
-        render '/404' unless params[:scope].in? decorator_class.collections.map(&:to_s)
+        if params[:scope].present?
+          render '/404' unless available_scope_given?
+        end
       end
 
       def collections_counts
@@ -31,6 +33,10 @@ module Tramway
 
       def model_given?
         params[:model].in? ::Tramway::Admin.available_models.map(&:to_s)
+      end
+
+      def available_scope_given?
+        params[:scope].present? && params[:scope].in?(decorator_class.collections.map(&:to_s))
       end
     end
   end
