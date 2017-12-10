@@ -34,7 +34,11 @@ module Tramway::Admin
 
     def tab_title(model_class, tab, count, state_method = :state)
       model = model_class.name.underscore
-      "#{t("activerecord.state_machines.#{model}.#{state_method}.states.#{tab}").pluralize(:ru)} / #{count}"
+      "#{t("collections.#{model}.#{tab}").pluralize(:ru)} / #{count}"
+    end
+
+    def record_path(*args, **options)
+      super args, options.merge(model: params[:model])
     end
   end
 end
