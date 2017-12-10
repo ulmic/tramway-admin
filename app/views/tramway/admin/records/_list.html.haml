@@ -8,6 +8,8 @@
     - @records.each do |record|
       %tr
         %td
+          = link_to record.name, record_path(record)
+        %td
           = link_to record.id, record_path(record)
         %td.actions
           .btn-group{ data: { toggle: :buttons } }

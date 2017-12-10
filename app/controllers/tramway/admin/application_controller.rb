@@ -18,6 +18,15 @@ module Tramway
         end
       end
 
+      def model_class
+        params[:model].constantize
+      end
+
+      def decorator_class
+        "#{model_class}Decorator".constantize
+      end
+
+
       private
 
       def model_given?

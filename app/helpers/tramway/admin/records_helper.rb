@@ -4,8 +4,12 @@ module Tramway::Admin
       params[:model].constantize
     end
 
+    def decorator_class
+      "#{model_class}Decorator".constantize
+    end
+
     def get_collection(model_class)
-      "#{model_class}Decorator".constantize.collections
+      decorator_class.collections
     end
 
     def to_path(constant)
