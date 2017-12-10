@@ -10,6 +10,7 @@ module Tramway
 
       def check_available!
         render '/404' unless model_given?
+        render '/404' unless params[:scope].in? decorator_class.collections.map(&:to_s)
       end
 
       def collections_counts
@@ -25,7 +26,6 @@ module Tramway
       def decorator_class
         "#{model_class}Decorator".constantize
       end
-
 
       private
 

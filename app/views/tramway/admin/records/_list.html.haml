@@ -9,6 +9,9 @@
       %tr
         %td
           = link_to record.name, record_path(record)
+        - decorator_class.list_attributes.each do |attribute|
+          %td
+            = record.send attribute
         %td
           = link_to record.id, record_path(record)
         %td.actions
