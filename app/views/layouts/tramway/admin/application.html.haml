@@ -7,10 +7,8 @@
     = csrf_meta_tags
   %body
     = render 'layouts/tramway/admin/shared/navbar'
-    %main
-      .jumbotron
-        .container
-          = yield
+    %main.container{ role: :main }
+      = yield
     %footer
       .container
         = copyright '2017', 'Tramway'
