@@ -14,7 +14,7 @@ gem 'trap', '~> 2.0'
 gem 'copyright_mafa'
 gem 'enumerize'
 gem 'kaminari'
-
+gem 'state_machine_buttons'
 
 group :development do
   gem 'better_errors'
