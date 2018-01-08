@@ -6,6 +6,10 @@ module Tramway::Admin
       @records = decorator_class.decorate model_class.send(params[:scope] || :all).page params[:page]
     end
 
+    def show
+      @record = decorator_class.decorate model_class.find params[:id]
+    end
+
     def edit
       @record_form = form_class.new model_class.find params[:id]
     end
