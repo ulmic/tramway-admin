@@ -1,5 +1,9 @@
+require 'tramway/admin/record_routes_helper'
+
 module Tramway::Admin
+  include RecordRoutesHelper
   module RecordsHelper
+
     def model_class
       params[:model].constantize
     end
@@ -40,22 +44,6 @@ module Tramway::Admin
     def active_tab(tab, index)
       return :active if params[:scope].nil? && index == 0
       return :active if params[:search].nil? && params[:scope].to_s == tab.to_s
-    end
-
-    def record_path(*args, **options)
-      super args, options.merge(model: params[:model])
-    end
-    
-    def edit_record_path(*args, **options)
-      super args, options.merge(model: params[:model])
-    end
-
-    def new_record_path(*args, **options)
-      super args, options.merge(model: params[:model])
-    end
-
-    def records_path(*args, **options)
-      super args, options.merge(model: params[:model])
     end
   end
 end

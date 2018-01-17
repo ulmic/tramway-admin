@@ -1,3 +1,4 @@
+require 'tramway/admin/record_routes_helper'
 require "tramway/admin/engine"
 require "tramway/user"
 require 'font-awesome-rails'
