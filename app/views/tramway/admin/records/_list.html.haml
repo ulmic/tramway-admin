@@ -18,7 +18,8 @@
         %td.actions
           .btn-group{ data: { toggle: :buttons } }
             - record.model.class.state_machines.keys.each do |state_method|
-              = state_events_buttons record, state_method: state_method, model_param_name: :record, route_method: :record_path, parameters: { redirect: records_path }
+              - unless state_method == :state
+                = state_events_buttons record, state_method: state_method, model_param_name: :record, route_method: :record_path, parameters: { redirect: records_path }
           = link_to fa_icon(:pencil), edit_record_path(record.id), class: 'btn btn-warning btn-xs'
           = link_to fa_icon(:remove), record_path(record.id), method: :delete, class: 'btn btn-xs btn-danger'
 = paginate @records, theme: 'twitter-bootstrap-4'

@@ -21,7 +21,7 @@ module Tramway
 
       def collections_counts
         @counts = "#{params[:model]}Decorator".constantize.collections.reduce({}) do |hash, collection|
-          hash.merge! collection => params[:model].constantize.send(collection).count
+          hash.merge! collection => params[:model].constantize.active.send(collection).count
         end
       end
 
