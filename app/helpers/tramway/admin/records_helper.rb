@@ -1,8 +1,8 @@
 require 'tramway/admin/record_routes_helper'
 
 module Tramway::Admin
-  include RecordRoutesHelper
   module RecordsHelper
+    include RecordRoutesHelper
 
     def model_class
       params[:model].constantize
