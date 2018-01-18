@@ -1,9 +1,5 @@
-require 'tramway/admin/record_routes_helper'
-
 module Tramway::Admin
   class RecordsController < ApplicationController
-    include ::Tramway::Admin::RecordRoutesHelper
-
     def index
       @records = decorator_class.decorate model_class.active.send(params[:scope] || :all).page params[:page]
     end
@@ -43,5 +39,24 @@ module Tramway::Admin
       record.remove
       redirect_to records_path
     end
+  end
+
+  private
+
+  # FIXME replace to module
+  def record_path(*args, **options)
+    super args, options.merge(model: params[:model])
+  end
+
+  def edit_record_path(*args, **options)
+    super args, options.merge(model: params[:model])
+  end
+
+  def new_record_path(*args, **options)
+    super args, options.merge(model: params[:model])
+  end
+
+  def records_path(*args, **options)
+    super args, options.merge(model: params[:model])
   end
 end

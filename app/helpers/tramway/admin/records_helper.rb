@@ -1,8 +1,21 @@
-require 'tramway/admin/record_routes_helper'
-
 module Tramway::Admin
   module RecordsHelper
-    include RecordRoutesHelper
+    # FIXME replace to module
+    def record_path(*args, **options)
+      super args, options.merge(model: params[:model])
+    end
+
+    def edit_record_path(*args, **options)
+      super args, options.merge(model: params[:model])
+    end
+
+    def new_record_path(*args, **options)
+      super args, options.merge(model: params[:model])
+    end
+
+    def records_path(*args, **options)
+      super args, options.merge(model: params[:model])
+    end
 
     def model_class
       params[:model].constantize
