@@ -1,5 +1,5 @@
 - default_page_title ||= nil; on_site_link ||= nil
-- current_title = default_page_title || model_class.model_name.human.pluralize(:ru)
+- current_title = default_page_title || plural(model_class).capitalize
 - title current_title
 - state_method ||= :state
 - tabs = get_collection model_class

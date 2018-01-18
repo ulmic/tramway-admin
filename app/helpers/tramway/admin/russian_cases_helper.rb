@@ -16,4 +16,8 @@ module Tramway::Admin::RussianCasesHelper
   def dative(word)
     case_word word, :dative
   end
+
+  def plural(word)
+    case_word word, :plural
+  end
 end

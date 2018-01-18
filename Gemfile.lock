@@ -1,11 +1,15 @@
-PATH
-  remote: ../tramway-core
+GIT
+  remote: git://github.com/kalashnikovisme/tramway-core.git
+  revision: 7a0b950422863bbab897c9db324f4342d190425b
+  branch: develop
   specs:
     tramway-core (0.1.0.4)
       rails (~> 5.1.4)
 
-PATH
-  remote: ../tramway-user
+GIT
+  remote: git://github.com/kalashnikovisme/tramway-user.git
+  revision: 006d58523e2ef99913a6837f4b91469905439c5d
+  branch: develop
   specs:
     tramway-user (0.1.0)
       rails (~> 5.1.4)

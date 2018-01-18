@@ -38,7 +38,12 @@ module Tramway::Admin
 
     def tab_title(model_class, tab, count, state_method = :state)
       model = model_class.name.underscore
-      "#{t("collections.#{model}.#{tab}").pluralize(:ru)} / #{count}"
+      name = if t("default.collections.#{tab}").include?('<span')
+               t("collections.#{model}.#{tab}").pluralize(:ru)
+             else 
+               t("default.collections.#{tab}")
+             end
+      "#{name} / #{count}"
     end
 
     def active_tab(tab, index)
