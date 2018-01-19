@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/kalashnikovisme/tramway-core.git
-  revision: c1e2382e8de6429fb4a4abe89ebb79b98040b6f2
+  revision: 9dfc83f6bdc054784ea6782eddfde9bc3a902b36
   branch: develop
   specs:
     tramway-core (0.1.0.4)
