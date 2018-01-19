@@ -14,6 +14,7 @@ gem 'trap', '~> 2.0'
 gem 'copyright_mafa'
 gem 'enumerize'
 gem 'kaminari'
+gem 'bootstrap-kaminari-views', github: 'rafaelmotta/bootstrap-kaminari-views', branch: :master
 gem 'state_machine_buttons'
 
 group :development do

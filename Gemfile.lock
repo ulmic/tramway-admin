@@ -15,6 +15,15 @@ GIT
       rails (~> 5.1.4)
       tramway-core (~> 0.1.0.4)
 
+GIT
+  remote: git://github.com/rafaelmotta/bootstrap-kaminari-views.git
+  revision: e8d57b2fbf56607731c6c9bf254f24f38ce2beec
+  branch: master
+  specs:
+    bootstrap-kaminari-views (0.0.5)
+      kaminari (>= 0.13)
+      rails (>= 3.1)
+
 PATH
   remote: .
   specs:
@@ -230,6 +239,7 @@ DEPENDENCIES
   bcrypt
   better_errors
   bootstrap (~> 4.0.0.beta2.1)
+  bootstrap-kaminari-views!
   copyright_mafa
   enumerize
   font-awesome-rails

@@ -2,6 +2,7 @@ module Tramway
   module Admin
     class ApplicationController < ActionController::Base
       include AuthManagment
+      include RecordRoutesHelper
       before_action :authenticate_admin!
       before_action :check_available!
       before_action :collections_counts, if: :model_given?
