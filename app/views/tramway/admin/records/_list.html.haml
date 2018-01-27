@@ -4,6 +4,8 @@
     %tr
       %th= model_class.human_attribute_name(:id)
       %th= model_class.human_attribute_name(:name)
+      - decorator_class.list_attributes.each do |attribute|
+        %th= model_class.human_attribute_name attribute
       %th= t 'helpers.links.actions'
   %tbody
     - @records.each do |record|
