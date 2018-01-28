@@ -1,0 +1,19 @@
+- default_page_title ||= nil; on_site_link ||= nil
+- current_title = default_page_title || model_class.model_name.human.pluralize(:ru)
+- title current_title
+.page-header
+  .row
+    .col-md-6
+      %h1
+        = current_title
+        = link_to fa_icon(:pencil), edit_singleton_path, class: 'btn btn-warning btn-xs'
+
+%hr
+.row
+  %table.table.table-striped.table-bordered
+    - @singleton.attributes.each do |attribute_name, value|
+      %tr
+        %td
+          = model_class.human_attribute_name attribute_name
+        %td
+          = value

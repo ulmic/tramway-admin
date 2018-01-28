@@ -15,6 +15,14 @@ module Tramway
       def available_models
         @available_models
       end
+
+      def singleton_models=(models)
+        @singleton_models = models
+      end
+
+      def singleton_models
+        @singleton_models
+      end
     end
   end
 end

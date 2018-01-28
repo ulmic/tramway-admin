@@ -41,7 +41,8 @@ module Tramway
       private
 
       def model_given?
-        params[:model].in? ::Tramway::Admin.available_models.map(&:to_s)
+        params[:model].in?(::Tramway::Admin.available_models.map(&:to_s)) ||
+          params[:model].in?(::Tramway::Admin.singleton_models.map(&:to_s))
       end
 
       def available_scope_given?
