@@ -8,16 +8,18 @@ module Tramway
     ::Tramway::User.layout_path = 'tramway/admin/application'
     
     class << self
-      def available_models=(models)
-        @available_models = models
+      def set_available_models(*models)
+        @available_models ||= []
+        @available_models += models
       end
 
       def available_models
         @available_models
       end
 
-      def singleton_models=(models)
-        @singleton_models = models
+      def set_singleton_models(*models)
+        @singleton_models ||= []
+        @singleton_models += models
       end
 
       def singleton_models
