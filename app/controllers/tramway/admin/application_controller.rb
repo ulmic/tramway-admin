@@ -7,6 +7,7 @@ module Tramway
       before_action :check_available!
       before_action :collections_counts, if: :model_given?
       before_action :check_available_scope!, if: :model_given?, only: :index
+      before_action :application
 
       protect_from_forgery with: :exception
 
@@ -36,6 +37,10 @@ module Tramway
 
       def form_class
         "#{model_class}Form".constantize
+      end
+
+      def application
+        @application = ::Tramway::Core.application.model_class.first
       end
 
       private

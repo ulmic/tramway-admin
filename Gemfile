@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 gemspec
-gem 'tramway-user', github: 'kalashnikovisme/tramway-user', branch: :develop
-gem 'tramway-core', github: 'kalashnikovisme/tramway-core', branch: :develop
+gem 'tramway-user', github: 'ulmic/tramway-user', branch: :develop
+gem 'tramway-core', github: 'ulmic/tramway-core', branch: :develop
 gem 'haml-rails'
 gem 'sass-rails'
 gem 'bootstrap', '~> 4.0.0.beta2.1'
