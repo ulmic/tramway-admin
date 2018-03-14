@@ -1,3 +1,3 @@
 CKEDITOR.editorConfig = function (config) {
-  config.extraPlugins = '';
+  config.extraPlugins = 'image,copyformatting,filebrowser';
 }
