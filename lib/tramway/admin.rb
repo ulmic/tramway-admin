@@ -25,6 +25,15 @@ module Tramway
       def singleton_models
         @singleton_models
       end
+
+      def set_additional_buttons(buttons)
+        @additional_buttons ||= {}
+        @additional_buttons.merge! buttons
+      end
+
+      def additional_buttons(view: nil, record: nil)
+        @additional_buttons&.dig record, view
+      end
     end
   end
 end

@@ -1,20 +1,20 @@
 module Tramway::Admin
   module RecordsHelper
     # FIXME replace to module
-    def record_path(*args, **options)
-      super args, options.merge(model: params[:model])
+    def current_model_record_path(*args, **options)
+      record_path args, options.merge(model: params[:model])
     end
 
-    def edit_record_path(*args, **options)
-      super args, options.merge(model: params[:model])
+    def edit_current_model_record_path(*args, **options)
+      edit_record_path args, options.merge(model: params[:model])
     end
 
-    def new_record_path(*args, **options)
-      super args, options.merge(model: params[:model])
+    def new_current_model_record_path(*args, **options)
+      new_record_path args, options.merge(model: params[:model])
     end
 
-    def records_path(*args, **options)
-      super args, options.merge(model: params[:model])
+    def current_model_records_path(*args, **options)
+      records_path args, options.merge(model: params[:model])
     end
 
     def model_class
